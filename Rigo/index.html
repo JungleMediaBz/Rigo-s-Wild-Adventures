@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO and Google Integration -->
+  <meta name="description" content="Explore Belize with Rigo's Wild Adventures & Culinaary Tours. We offer authentic cave tubing, Mayan ruins tours, culinary experiences, and custom adventures with expert local guides.">
+  <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+
+  <!-- Google tag (gtag.js) for Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'YOUR_GA_MEASUREMENT_ID');
+  </script>
+  <!-- End Google Integration -->
+
+  <title>Rigo's Wild Adventures and Culinary Tours</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Styles to ensure the popup is centered and visible */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1001;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 90vw;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="images/Rigo.png" alt="Rigo's Wild Adventures Logo">
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div id="hero-slider" class="hero-slider"></div>
+    <div class="hero-content">
+      <h1>Rigo's Wild Adventures and Culinary Tours</h1>
+      <p>Discover the beauty of Belize with our expert guides. Featuring local cuisine and culture.</p>
+      <div class="hero-buttons">
+        <button class="btn btn-primary">Book Now</button>
+        <button class="btn btn-secondary">Learn More</button>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Explore Adventures Section -->
+  <section class="adventures">
+    <div class="container">
+      <h2>Explore Our Adventures</h2>
+      <p>Discover the best of Belize with our expert local guides</p>
+      
+      <div class="adventure-slider-container">
+        <div class="adventure-grid">
+          <!-- Adventure cards will be dynamically inserted here by script.js -->
+        </div>
+        <button class="slider-btn prev-btn">&lt;</button>
+        <button class="slider-btn next-btn">&gt;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <h2>About Rigo's Wild Adventures</h2>
+      <p>Welcome to Rigo's Wild Adventures, your gateway to an unforgettable journey through the heart of Belize's natural beauty and rich cultural heritage. Founded by Rigo, a passionate local guide with over 15 years of experience, our company is dedicated to providing authentic, sustainable, and memorable adventures that showcase the very best of what Belize has to offer.</p>
+      
+      <p>We pride ourselves on creating personalized adventure tours. If this itinerary doesn't fit, we would be happy to work with you to create a custom adventure that perfectly matches your interests, fitness level, and time constraints. From thrilling cave tubing expeditions to enlightening cultural experiences, we ensure that every moment of your journey is filled with wonder and discovery.</p>
+      
+      <p>Our team of expert local guides brings unparalleled knowledge, infectious enthusiasm, and unwavering commitment to your safety and enjoyment. We believe that travel should be transformative, and we're here to help you create memories that will last a lifetime while supporting the local communities that make Belize so special.</p>
+    </div>
+  </section>
+
+  <!-- Discover Belize Section -->
+  <section class="discover">
+    <div class="container">
+      <div class="discover-content">
+        <div class="discover-text">
+          <h2>Discover Belize</h2>
+          <p>Belize is a small country located on the eastern coast of Central America, bordered by Mexico to the north and Guatemala to the west and south. Despite its small size, Belize offers an incredible diversity of landscapes, from pristine Caribbean beaches to dense tropical rainforests.</p>
+          
+          <p>The country is renowned for its barrier reef, the second-largest in the world, making it a paradise for snorkeling and diving enthusiasts. Inland, you'll find ancient Mayan ruins, extensive cave systems, and lush jungles teeming with wildlife.</p>
+          
+          <p>Belize's rich cultural heritage is reflected in its diverse population, which includes descendants of the ancient Maya, Creole, Garifuna, Mestizo, and other ethnic groups. This cultural diversity is celebrated through vibrant festivals, delicious cuisine, and warm hospitality that welcomes visitors from around the world.</p>
+        </div>
+        <div class="discover-image">
+          <img src="images/4.jpeg" 
+               onerror="this.src='https://dummyimage.com/600x400/e5e5e5/666666?text=Belize+Landscape'" 
+               alt="Beautiful Belize landscape" referrerpolicy="no-referrer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Our Guests Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"An absolutely incredible experience! Rigo and his team made our cave tubing adventure unforgettable. The guides were knowledgeable, friendly, and made us feel safe throughout the entire journey."</p>
+          <div class="testimonial-author">
+            <strong>Sarah Johnson</strong>
+            <span>Toronto, Canada</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The Mayan ruins tour was fascinating! Our guide's passion for Belizean history really brought the ancient sites to life. We learned so much and had an amazing time exploring."</p>
+          <div class="testimonial-author">
+            <strong>Michael Chen</strong>
+            <span>San Francisco, USA</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The culinary tour was a highlight of our trip to Belize. We got to taste authentic local dishes and even learned to cook some traditional recipes. Highly recommended!"</p>
+          <div class="testimonial-author">
+            <strong>Emily Davis</strong>
+            <span>London, UK</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            What should I bring on the tours?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We recommend bringing comfortable clothing, water shoes, sunscreen, insect repellent, a hat, and a waterproof camera. We provide all necessary safety equipment and gear for each specific tour.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Are the tours suitable for beginners?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! Our tours are designed to accommodate all skill levels. Our experienced guides will provide instruction and support to ensure everyone has a safe and enjoyable experience.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you provide hotel pick-up?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we offer complimentary hotel pick-up and drop-off for most accommodations in the main tourist areas. Please let us know your hotel when booking.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is your cancellation policy?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We offer full refunds for cancellations made 48 hours or more before your tour date. Cancellations within 48 hours are subject to a 50% cancellation fee.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is food included in the tours?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Food inclusion varies by tour. Our culinary tours include all tastings and meals, while adventure tours include snacks and beverages. Full details are provided in each tour description.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What payment methods do you accept?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We accept cash (USD and BZD), major credit cards (Visa, MasterCard, American Express), and PayPal for online bookings. A deposit is required to secure your reservation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p>Ready to start your adventure? Contact us today!</p>
+      
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+          </div>
+          <h3>Phone</h3>
+          <p>+501 611-0683<br>Available 7 days a week</p>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
+          <h3>Email</h3>
+          <p>rigoswildadventures@gmail.com<br>We'll respond within 24 hours</p>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
+          <h3>Location</h3>
+          <p>Placencia, Stann Creek District<br>Belize, Central America</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking">
+    <div class="container">
+      <h2>Book Your Adventure</h2>
+      <p>Fill out the form below and we'll get back to you within 24 hours to confirm your booking.</p>
+      
+      <form class="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="guests">Number of Guests *</label>
+            <select id="guests" name="guests" required>
+              <option value="">Select number of guests</option>
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5+ Guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="tour">Preferred Tour *</label>
+            <select id="tour" name="tour" required>
+              <option value="">Select a tour</option>
+              <option value="atm-cave">ATM Cave Exploration</option>
+              <option value="banana-farm-cheil-chocolate">Banana Farm + Cheil Chocolate</option>
+              <option value="banana-farm-waterfall">Banana Farm + Mayan World Waterfall</option>
+              <option value="cave-tubing-nohoch-cheen">Cave Tubing at Nohoch Che'en</option>
+              <option value="cheil-chocolate-half-day">Half Day Cheil Chocolate</option>
+              <option value="cheil-chocolate-waterfall">Cheil Chocolate + Mayan World Waterfall</option>
+              <option value="chocolate-classes">Chocolate Classes</option>
+              <option value="cockscomb-jungle-cheil-chocolate">Cockscomb Jungle + Cheil Chocolate</option>
+              <option value="cockscomb-jungle-night-tour">Cockscomb Jungle Night Tour</option>
+              <option value="cockscomb-jungle-rivertubing">Cockscomb Jungle + Rivertubing</option>
+              <option value="cockscomb-jungle-waterfall">Cockscomb Jungle + Waterfall</option>
+              <option value="garifuna-cooking-cheil-waterfall">Garifuna Cooking + Cheil + Waterfall</option>
+              <option value="garifuna-cooking-waterfall">Garifuna Cooking + Mayan World Waterfall</option>
+              <option value="horse-back-riding-waterfall">Horse Back Riding to Waterfall</option>
+              <option value="ixcacao-chocolate-nim-li-punit">Ixcacao Chocolate + Nim Li Punit</option>
+              <option value="ixcacao-chocolate-spice-farm">Ixcacao Chocolate + Spice Farm</option>
+              <option value="ixcacao-chocolate-spice-farm-waterfall">Ixcacao Chocolate + Spice Farm + Waterfall</option>
+              <option value="ixcacao-chocolate-waterfall">Ixcacao Chocolate + Mayan World Waterfall</option>
+              <option value="jungle-atv-waterfall">Jungle ATV + Mayan World Waterfall</option>
+              <option value="mayan-cooking-ixcacao-chocolate">Mayan Cooking + Ixcacao Chocolate</option>
+              <option value="mayan-cooking-nim-li-punit">Mayan Cooking + Nim Li Punit</option>
+              <option value="mestizo-cooking-classes">Mestizo Cooking Classes</option>
+              <option value="mestizo-cooking-cheil-chocolate">Mestizo Cooking + Cheil Chocolate</option>
+              <option value="mestizo-cooking-waterfall">Mestizo Cooking + Mayan World Waterfall</option>
+              <option value="placencia-dinner-tour">Placencia Dinner Walking Tour</option>
+              <option value="placencia-lunch-tour">Placencia Lunch Walking Tour</option>
+              <option value="spice-farm-ixcacao-nim-li-punit">Spice Farm + Ixcacao Chocolate + Nim Li Punit</option>
+              <option value="spice-farm-nim-li-punit">Spice Farm + Nim Li Punit</option>
+              <option value="xunantunich-blue-hole">Xunantunich + Blue Hole</option>
+              <option value="xunantunich-cave-tubing">Xunantunich + Cave Tubing</option>
+              <option value="zipline-cheil-chocolate">Zipline + Cheil Chocolate</option>
+              <option value="zipline-rivertubing-waterfall">Zipline + Rivertubing + Waterfall</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Special Requests or Questions</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about any dietary restrictions, accessibility needs, or special requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-large">Submit Booking Request</button>
+        
+        <p class="form-note">* Required fields. By submitting this form, you agree to our terms and conditions.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <h3>Rigo's Wild Adventures</h3>
+        <p>Creating unforgettable memories in beautiful Belize</p>
+        <p>&copy; 2025 Rigo's Wild Adventures. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="popup-overlay"></div>
+  <div class="popup">
+    <div class="popup-content">
+      <button class="popup-close">&times;</button>
+      <img id="popup-image" src="" alt="Tour Image" class="popup-image-display">
+      <div class="popup-header">
+        <h3 id="popup-title">Tour Title</h3>
+        <p id="popup-price" class="price">Starting at $0</p>
+      </div>
+
+      <div class="popup-details-grid">
+        <div class="popup-detail-item">
+          <div class="popup-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.5 14H8v-2h8.5v2z"/></svg>
+          </div>
+          <div>
+            <strong>Duration</strong>
+            <span id="popup-duration">Full Day</span>
+          </div>
+        </div>
+        <div class="popup-detail-item">
+          <div class="popup-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          </div>
+          <div>
+            <strong>Group Size</strong>
+            <span id="popup-group-size">Small Groups</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-section">
+        <h4>Tour Description</h4>
+        <p id="popup-description"></p>
+      </div>
+
+      <div class="popup-columns">
+        <div class="popup-section">
+          <h4>What's Included</h4>
+          <ul id="popup-included"></ul>
+        </div>
+
+        <div class="popup-section">
+          <h4>What to Bring</h4>
+          <ul id="popup-bring"></ul>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-large" style="width: 100%; margin-top: 1.5rem;">Inquire About This Tour</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
