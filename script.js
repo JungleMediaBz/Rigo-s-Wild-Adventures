@@ -183,26 +183,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Popup Functionality ---
 
-  // Tour data object
-  const genericBringWater = [
-    'Comfortable clothing and walking shoes',
-    'Swimsuit and towel (for water tours)',
-    'Sunscreen, hat, and sunglasses',
-    'Insect repellent',
-    'Reusable water bottle',
-    'Camera to capture memories',
-    'Cash for souvenirs or tips',
-  ];
-
-  const genericBringNoWater = [
-    'Comfortable clothing and walking shoes',
-    'Sunscreen, hat, and sunglasses',
-    'Insect repellent',
-    'Reusable water bottle',
-    'Camera to capture memories',
-    'Cash for souvenirs or tips',
-  ];
-
   const tourData = {
     'cave-tubing-nohoch-cheen': {
       title: "Cave Tubing at Nohoch Che'en",
@@ -212,7 +192,14 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '7AM to 5:00PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Swimsuit and a towel',
+        'Water shoes or sandals with a backstrap',
+        'A change of dry clothes for after the tour',
+        'Sunscreen and insect repellent',
+        'Waterproof camera or phone case',
+        'Cash for souvenirs or tips'
+      ]
     },
     'xunantunich-cave-tubing': {
       title: 'Xunantunich + Cave Tubing',
@@ -222,7 +209,14 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '6AM to 5:30PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable walking shoes for the ruins',
+        'Swimsuit and a towel',
+        'Water shoes for tubing',
+        'A change of dry clothes',
+        'Sunscreen, hat, and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'xunantunich-blue-hole': {
       title: 'Xunantunich + Blue Hole',
@@ -232,7 +226,14 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '6AM to 5:30PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable walking shoes for the ruins',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen, hat, and insect repellent',
+        'Camera to capture memories',
+        'Cash for souvenirs or tips'
+      ]
     },
     'cheil-chocolate-half-day': {
       title: 'Half Day Cheil Chocolate',
@@ -242,7 +243,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 1PM',
       groupSize: 'Minimum 3 people',
       included: ['Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable clothing and shoes',
+        'Camera to capture the experience',
+        'Insect repellent',
+        'Cash for purchasing chocolate or souvenirs'
+      ]
     },
     'cockscomb-jungle-cheil-chocolate': {
       title: 'Cockscomb Jungle + Cheil Chocolate',
@@ -252,7 +258,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 3:30PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable hiking shoes',
+        'Lightweight long-sleeved shirt for sun/bug protection',
+        'Sunscreen, hat, and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'cockscomb-jungle-waterfall': {
       title: 'Cockscomb Jungle + Cockscomb Waterfall',
@@ -262,7 +273,13 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 4:00PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable hiking shoes that can get wet',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen, hat, and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'cockscomb-jungle-rivertubing': {
       title: 'Cockscomb Jungle + Cockscomb Rivertubing',
@@ -272,7 +289,14 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 4:00PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Swimsuit and a towel',
+        'Water shoes or sandals with a backstrap',
+        'A change of dry clothes',
+        'Comfortable hiking shoes for the jungle walk',
+        'Sunscreen, hat, and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'cockscomb-jungle-night-tour': {
       title: 'Cockscomb Jungle Night Tour',
@@ -282,7 +306,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '4PM to 10PM',
       groupSize: 'Minimum 3 people',
       included: ['Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Closed-toe shoes (hiking boots recommended)',
+        'Long pants and a long-sleeved shirt for bug protection',
+        'A small flashlight or headlamp (optional, guide will have one)',
+        'Strong insect repellent'
+      ]
     },
     'jungle-atv-waterfall': {
       title: 'Jungle ATV + Mayan World Waterfall',
@@ -292,7 +321,14 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 2PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Clothes you don\'t mind getting muddy',
+        'Closed-toe shoes are mandatory for ATV',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'zipline-cheil-chocolate': {
       title: 'Zipline Mayan World + Cheil Chocolate',
@@ -302,7 +338,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 3:30PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable clothing and closed-toe shoes',
+        'Sunscreen and insect repellent',
+        'Camera to capture memories',
+        'Cash for souvenirs or tips'
+      ]
     },
     'zipline-rivertubing-waterfall': {
       title: 'Zipline + Rivertubing + Waterfall',
@@ -312,7 +353,14 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 4:00PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Closed-toe shoes for ziplining',
+        'Swimsuit and a towel',
+        'Water shoes or sandals with a backstrap',
+        'A change of dry clothes',
+        'Sunscreen and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'horse-back-riding-waterfall': {
       title: 'Horse Back Riding to Waterfall',
@@ -322,7 +370,13 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 1PM',
       groupSize: 'Minimum 3 people',
       included: ['Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Long pants are recommended for riding',
+        'Closed-toe shoes',
+        'Swimsuit (can be worn underneath) and a towel',
+        'Sunscreen, hat, and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'cheil-chocolate-waterfall': {
       title: 'Cheil Chocolate + Mayan World Waterfall',
@@ -332,7 +386,13 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 3:30PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable clothing and walking shoes',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'mayan-cooking-nim-li-punit': {
       title: 'Mayan Cooking + Nim Li Punit',
@@ -342,7 +402,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 5PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable walking shoes',
+        'Sunscreen and a hat for the ruins',
+        'Insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'mayan-cooking-ixcacao-chocolate': {
       title: 'Mayan Cooking + Ixcacao Chocolate',
@@ -352,7 +417,11 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 5PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable shoes',
+        'Camera for photos',
+        'Cash for purchasing chocolate or souvenirs'
+      ]
     },
     'ixcacao-chocolate-spice-farm': {
       title: 'Ixcacao Chocolate + Spice Farm',
@@ -362,7 +431,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 5PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable walking shoes',
+        'Sunscreen and insect repellent',
+        'Camera for photos',
+        'Cash for purchasing chocolate, spices, or souvenirs'
+      ]
     },
     'spice-farm-nim-li-punit': {
       title: 'Spice Farm + Nim Li Punit',
@@ -372,7 +446,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 5PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable walking shoes',
+        'Sunscreen, hat, and insect repellent',
+        'Camera for photos',
+        'Cash for purchasing spices or souvenirs'
+      ]
     },
     'ixcacao-chocolate-nim-li-punit': {
       title: 'Ixcacao Chocolate + Nim Li Punit',
@@ -382,7 +461,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 5PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable walking shoes',
+        'Sunscreen, hat, and insect repellent',
+        'Camera for photos',
+        'Cash for purchasing chocolate or souvenirs'
+      ]
     },
     'ixcacao-chocolate-spice-farm-waterfall': {
       title: 'Ixcacao Chocolate + Spice Farm + Waterfall',
@@ -392,7 +476,13 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '7AM to 5:30PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable walking shoes',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'spice-farm-ixcacao-nim-li-punit': {
       title: 'Spice Farm + Ixcacao Chocolate + Nim Li Punit',
@@ -402,7 +492,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '7AM to 5:30PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable walking shoes',
+        'Sunscreen, hat, and insect repellent',
+        'Camera for photos',
+        'Cash for purchasing chocolate, spices, or souvenirs'
+      ]
     },
     'ixcacao-chocolate-waterfall': {
       title: 'Ixcacao Chocolate + Mayan World Waterfall',
@@ -412,7 +507,13 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '8AM to 5PM',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable walking shoes',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen and insect repellent',
+        'Cash for purchasing chocolate or souvenirs'
+      ]
     },
     'chocolate-classes': {
       title: 'Chocolate Classes',
@@ -422,7 +523,10 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: '1.5 hours',
       groupSize: 'Minimum 3 people',
       included: ['History', 'Tasting', 'Tour Guide'],
-      bring: genericBringNoWater
+      bring: [
+        'Camera for photos',
+        'Cash for purchasing extra chocolate'
+      ]
     },
     'placencia-lunch-walking-tour': {
       title: 'Placencia Lunch Walking Tour',
@@ -432,7 +536,11 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: 'Approx. 3 hours',
       groupSize: 'Minimum 2 people',
       included: ['History', 'Tasting', 'Food and water'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable walking shoes',
+        'Sunscreen and a hat',
+        'An appetite!'
+      ]
     },
     'placencia-dinner-walking-tour': {
       title: 'Placencia Dinner Walking Tour',
@@ -442,7 +550,11 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: 'Approx. 3 hours',
       groupSize: 'Minimum 2 people',
       included: ['History', 'Tasting', 'Food and water'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable walking shoes',
+        'Light jacket or sweater (evenings can be cool)',
+        'An appetite!'
+      ]
     },
     'mestizo-cooking-classes': {
       title: 'Mestizo Cooking Classes',
@@ -452,7 +564,10 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: 'Approx. 3-4 hours',
       groupSize: 'Minimum 3 people',
       included: ['Tour Guide', 'Fees', 'Food Included', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable shoes',
+        'Camera to document your cooking'
+      ]
     },
     'garifuna-cooking-waterfall': {
       title: 'Garifuna Cooking + Mayan World Waterfall',
@@ -462,7 +577,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: 'Approx. 5-6 hours',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable shoes',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen and insect repellent'
+      ]
     },
     'garifuna-cooking-cheil-waterfall': {
       title: 'Garifuna Cooking + Cheil + Mayan World Waterfall',
@@ -472,7 +592,13 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: 'Full Day',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable shoes',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'mestizo-cooking-waterfall': {
       title: 'Mestizo Cooking + Mayan World Waterfall',
@@ -482,7 +608,12 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: 'Approx. 5-6 hours',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable shoes',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen and insect repellent'
+      ]
     },
     'mestizo-cooking-cheil-chocolate': {
       title: 'Mestizo Cooking + Cheil Chocolate',
@@ -492,7 +623,11 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: 'Approx. 6 hours',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable shoes',
+        'Camera for photos',
+        'Cash for purchasing chocolate or souvenirs'
+      ]
     },
     'atm-cave': {
       title: 'ATM Cave Exploration',
@@ -502,7 +637,13 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: 'Full Day',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'A full change of clothes and a towel (you will get completely wet)',
+        'Sturdy, closed-toe hiking shoes or water shoes that you can hike in',
+        'A pair of socks (mandatory for inside the cave)',
+        'Insect repellent',
+        'NOTE: Cameras are NOT allowed on this tour'
+      ]
     },
     'banana-farm-waterfall': {
       title: 'Banana Farm + Mayan World Waterfall',
@@ -512,17 +653,28 @@ document.addEventListener('DOMContentLoaded', function() {
       duration: 'Full Day',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'One bottle of water each'],
-      bring: genericBringWater
+      bring: [
+        'Comfortable walking shoes',
+        'Swimsuit and a towel',
+        'A change of dry clothes',
+        'Sunscreen, hat, and insect repellent',
+        'Cash for souvenirs or tips'
+      ]
     },
     'banana-farm-cheil-chocolate': {
       title: 'Banana Farm + Cheil Chocolate',
       price: '(Pending)',
       description: "Explore two of Belize's most important and delicious crops. Start with a fascinating tour of a working banana farm to see how this fruit is grown and prepared for export. Then, switch gears for a hands-on chocolate making class at a local farm.",
-      image: 'images/cheil1.jpg', // Chocolate is a strong visual
+      image: 'images/banana2.jpg', // Chocolate is a strong visual
       duration: 'Full Day',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'One bottle of water each'],
-      bring: genericBringNoWater
+      bring: [
+        'Comfortable walking shoes',
+        'Sunscreen, hat, and insect repellent',
+        'Camera for photos',
+        'Cash for purchasing chocolate or souvenirs'
+      ]
     }
   };
 
