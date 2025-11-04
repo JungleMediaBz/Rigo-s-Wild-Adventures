@@ -665,7 +665,7 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Banana Farm + Cheil Chocolate',
       price: '(Pending)',
       description: "Explore two of Belize's most important and delicious crops. Start with a fascinating tour of a working banana farm to see how this fruit is grown and prepared for export. Then, switch gears for a hands-on chocolate making class at a local farm.",
-      image: 'images/banana2.jpg', // Chocolate is a strong visual
+      image: 'images/banana2.jpeg', // Banana is a strong visual
       duration: 'Full Day',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'One bottle of water each'],
