@@ -1,5 +1,10 @@
 // FAQ Functionality
 document.addEventListener('DOMContentLoaded', function() {
+  // --- EmailJS Initialization ---
+  // IMPORTANT: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key from your account dashboard.
+  emailjs.init('lUln9zR9vYfdlWGbI');
+
+
   // --- Hero Slider ---
   const faqQuestions = document.querySelectorAll('.faq-question');
 
@@ -59,24 +64,38 @@ document.addEventListener('DOMContentLoaded', function() {
   const bookingForm = document.querySelector('.booking-form');
   
   if (bookingForm) {
-    bookingForm.addEventListener('submit', function(e) {
+    bookingForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      
-      // Get form data
+
+      // Simple validation
       const formData = new FormData(this);
       const data = Object.fromEntries(formData);
-      
-      // Simple validation
       if (!data.name || !data.email || !data.guests || !data.tour) {
         alert('Please fill in all required fields.');
         return;
       }
-      
-      // Simulate form submission
-      alert('Thank you for your booking request! We will contact you within 24 hours to confirm your adventure.');
-      
-      // Reset form
-      this.reset();
+
+      const submitButton = this.querySelector('button[type="submit"]');
+      const originalButtonText = submitButton.textContent;
+      submitButton.textContent = 'Sending...';
+      submitButton.disabled = true;
+
+      // --- EmailJS Submission ---
+      const serviceID = 'service_8iryo1g';
+      const templateID = 'template_6sxlvus';
+
+      emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+          alert('Thank you for your booking request! We will contact you within 24 hours to confirm your adventure.');
+          this.reset(); // Reset form on success
+        }, (err) => {
+          alert('Oops! Something went wrong. Please try again or contact us directly.\n\nError: ' + JSON.stringify(err));
+        })
+        .finally(() => {
+          // Restore button text and state regardless of outcome
+          submitButton.textContent = originalButtonText;
+          submitButton.disabled = false;
+        });
     });
   }
 
