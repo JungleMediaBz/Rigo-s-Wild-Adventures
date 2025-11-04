@@ -29,18 +29,25 @@ body {
   width: 100%;
   padding: 1rem 0;
   z-index: 100;
-  transition: background-color 0.3s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .main-header.scrolled {
-  background-color: #1a3d1f; /* Dark green from footer */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.logo {
+  /* Styles for the logo container if needed */
 }
 
 .logo img {
-  height: 80px;
+  height: 120px;
   width: auto;
   transition: height 0.3s ease;
+  display: block; /* Ensures the logo is centered within its new background */
 }
 
 /* Hero Section */
@@ -224,6 +231,7 @@ body {
   flex: 0 0 350px; /* Fixed width for each card */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  overflow: hidden; /* Ensures the image corners are rounded with the card */
 }
 
 .adventure-card:hover {
@@ -607,7 +615,7 @@ body {
   }
 
   .logo img {
-    height: 60px;
+    height: 80px;
   }
 
   .hero-content p {
@@ -663,7 +671,7 @@ body {
   }
 
   .logo img {
-    height: 50px;
+    height: 70px;
   }
 
   .adventure-card {
