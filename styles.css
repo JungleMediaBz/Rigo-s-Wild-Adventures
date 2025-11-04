@@ -833,3 +833,43 @@ body {
 .popup-section ul {
   list-style: disc;
 }
+
+/* --- Thank You Popup Styles --- */
+.thank-you-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 450px;
+  z-index: 1002; /* Higher than the overlay */
+  text-align: center;
+  padding: 2.5rem 2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.thank-you-popup.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.thank-you-logo {
+  height: 90px;
+  margin-bottom: 1.5rem;
+}
+
+.thank-you-popup h2 {
+  color: #2c5530; /* Main brand color */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you-popup p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}

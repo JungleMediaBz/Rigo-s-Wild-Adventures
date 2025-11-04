@@ -84,12 +84,40 @@ document.addEventListener('DOMContentLoaded', function() {
       const serviceID = 'service_8iryo1g';
       const templateID = 'template_6sxlvus';
 
-      emailjs.sendForm(serviceID, templateID, this)
+      // Manually create the template parameters object for reliability.
+      // This ensures the data keys match your EmailJS template variables (e.g., {{name}}, {{tour_selection}}).
+      const templateParams = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone || 'Not provided',
+        guests: data.guests,
+        tour_selection: data.tour,
+        preferred_date: data.date || 'Not specified',
+        message: data.message || 'No message'
+      };
+
+      emailjs.send(serviceID, templateID, templateParams)
         .then(() => {
-          alert('Thank you for your booking request! We will contact you within 24 hours to confirm your adventure.');
+          // Show custom thank you popup instead of alert
+          const thankYouPopup = document.getElementById('thank-you-popup');
+          const thankYouOverlay = document.getElementById('thank-you-overlay');
+          if (thankYouPopup && thankYouOverlay) {
+            thankYouOverlay.style.display = 'block';
+            thankYouPopup.style.display = 'block';
+            // Use a timeout to allow the display property to apply before adding the transition class
+            setTimeout(() => {
+              thankYouPopup.classList.add('visible');
+            }, 10);
+          } else {
+            // Fallback to alert if popup elements are not found
+            alert('Thank you for your booking request! We will contact you within 24 hours to confirm your adventure.');
+          }
+
           this.reset(); // Reset form on success
+
         }, (err) => {
-          alert('Oops! Something went wrong. Please try again or contact us directly.\n\nError: ' + JSON.stringify(err));
+          console.error('EmailJS Error:', err);
+          alert('Oops! Something went wrong and your message could not be sent. Please try again or contact us directly.');
         })
         .finally(() => {
           // Restore button text and state regardless of outcome
@@ -98,6 +126,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
   }
+
+  // --- Thank You Popup Close Functionality ---
+  const thankYouPopup = document.getElementById('thank-you-popup');
+  const thankYouOverlay = document.getElementById('thank-you-overlay');
+  const thankYouOkButton = document.getElementById('thank-you-ok');
+
+  function closeThankYouPopup() {
+    if (thankYouPopup && thankYouOverlay) {
+      thankYouPopup.classList.remove('visible');
+      // Wait for the transition to finish before hiding
+      setTimeout(() => {
+        thankYouOverlay.style.display = 'none';
+        thankYouPopup.style.display = 'none';
+      }, 300); // Must match the CSS transition duration
+    }
+  }
+
+  if (thankYouOkButton) thankYouOkButton.addEventListener('click', closeThankYouPopup);
 
   // Scroll animations
   const observerOptions = {
