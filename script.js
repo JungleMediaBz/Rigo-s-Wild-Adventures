@@ -87,13 +87,15 @@ document.addEventListener('DOMContentLoaded', function() {
       // Manually create the template parameters object for reliability.
       // This ensures the data keys match your EmailJS template variables (e.g., {{name}}, {{tour_selection}}).
       const templateParams = {
-        name: data.name,
-        email: data.email,
+        from_name: data.name, // Changed to match template variable {{from_name}}
+        from_email: data.email, // Changed to match template variable {{from_email}}
         phone: data.phone || 'Not provided',
         guests: data.guests,
-        tour_selection: data.tour,
-        preferred_date: data.date || 'Not specified',
-        message: data.message || 'No message'
+        tour_type: data.tour, // Changed to match template variable {{tour_type}}
+        date_time: data.date || 'Not specified', // Changed to match template variable {{date_time}}
+        message: data.message || 'No message',
+        contact_method: 'Email', // Assuming email is the primary contact method from the form
+        current_year: new Date().getFullYear() // Added for the footer in the template
       };
 
       emailjs.send(serviceID, templateID, templateParams)
