@@ -20,6 +20,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
+  // --- TripAdvisor Badge Logic ---
+  const tripAdvisorBadge = document.querySelector('.tripadvisor-badge-floating');
+  const testimonialsSection = document.querySelector('.testimonials');
+
+  if (tripAdvisorBadge) {
+    // 1. Show for 5 seconds on page load
+    tripAdvisorBadge.classList.add('visible');
+    setTimeout(() => {
+      // Only hide it if the testimonials section is not already in view
+      const testimonialsRect = testimonialsSection ? testimonialsSection.getBoundingClientRect() : { top: 9999 };
+      if (testimonialsRect.top > window.innerHeight || testimonialsRect.bottom < 0) {
+        tripAdvisorBadge.classList.remove('visible');
+      }
+    }, 5000);
+
+    // 2. Reappear when scrolling to the testimonials section
+    if (testimonialsSection) {
+      const badgeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tripAdvisorBadge.classList.add('visible');
+          } else {
+            tripAdvisorBadge.classList.remove('visible');
+          }
+        });
+      }, { threshold: 0.1 }); // Appears when 10% of the section is visible
+
+      badgeObserver.observe(testimonialsSection);
+    }
+  }
+
   faqQuestions.forEach(question => {
     question.addEventListener('click', function() {
       const faqItem = this.parentElement;

@@ -17,7 +17,7 @@ body {
 }
 .main-header .container {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Reverted to center the main logo */
   align-items: center;
 }
 
@@ -48,6 +48,29 @@ body {
   width: auto;
   transition: height 0.3s ease;
   display: block; /* Ensures the logo is centered within its new background */
+}
+
+/* --- Floating TripAdvisor Badge --- */
+.tripadvisor-badge-floating {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 101; /* Above header, below popups */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+}
+
+.tripadvisor-badge-floating.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.tripadvisor-badge-floating img {
+  height: 50px; /* Adjust size as needed */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); /* Add shadow for visibility */
 }
 
 /* Hero Section */
@@ -603,6 +626,19 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.footer-badge {
+  margin: 1.5rem 0;
+}
+
+.footer-badge img {
+  height: 40px; /* Adjust size as needed */
+  transition: opacity 0.3s ease;
+}
+
+.footer-badge img:hover {
+  opacity: 0.85;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
@@ -616,6 +652,10 @@ body {
 
   .logo img {
     height: 80px;
+  }
+
+  .tripadvisor-badge-floating img {
+    height: 40px;
   }
 
   .hero-content p {
@@ -672,6 +712,11 @@ body {
 
   .logo img {
     height: 70px;
+  }
+
+  .tripadvisor-badge-floating {
+    top: 15px;
+    right: 15px;
   }
 
   .adventure-card {
