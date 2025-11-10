@@ -745,7 +745,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     'banana-farm-waterfall': {
       title: 'Banana Farm + Mayan World Waterfall',
-      price: '(Pending)',
+      price: '(Inquire for price)',
       description: "Discover the journey of a banana from farm to table! This tour takes you through a working banana plantation to learn about the cultivation and harvesting process of one of Belize's top exports. Afterwards, cool off with a relaxing swim at a beautiful Mayan World waterfall.",
       image: 'images/waterfall.jpg', // Waterfall is the destination
       duration: 'Full Day',
@@ -761,7 +761,7 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     'banana-farm-cheil-chocolate': {
       title: 'Banana Farm + Cheil Chocolate',
-      price: '(Pending)',
+      price: '(Inquire for price)',
       description: "Explore two of Belize's most important and delicious crops. Start with a fascinating tour of a working banana farm to see how this fruit is grown and prepared for export. Then, switch gears for a hands-on chocolate making class at a local farm.",
       image: 'images/banana2.jpeg', // Banana is a strong visual
       duration: 'Full Day',
