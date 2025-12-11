@@ -50,29 +50,6 @@ body {
   display: block; /* Ensures the logo is centered within its new background */
 }
 
-/* --- Floating TripAdvisor Badge --- */
-.tripadvisor-badge-floating {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 101; /* Above header, below popups */
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
-}
-
-.tripadvisor-badge-floating.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.tripadvisor-badge-floating img {
-  height: 50px; /* Adjust size as needed */
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4)); /* Add shadow for visibility */
-}
-
 /* Hero Section */
 .hero {
   height: 100vh;
@@ -637,6 +614,28 @@ body {
 
 .footer-badge img:hover {
   opacity: 0.85;
+}
+
+.footer-social-media {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-social-media a {
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.footer-social-media a:hover {
+  opacity: 0.8;
+}
+
+.footer-social-media svg {
+  width: 32px;
+  height: 32px;
 }
 
 /* Responsive Design */
