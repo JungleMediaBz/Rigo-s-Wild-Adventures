@@ -747,7 +747,7 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Banana Farm + Mayan World Waterfall',
       price: '(Inquire for price)',
       description: "Discover the journey of a banana from farm to table! This tour takes you through a working banana plantation to learn about the cultivation and harvesting process of one of Belize's top exports. Afterwards, cool off with a relaxing swim at a beautiful Mayan World waterfall.",
-      image: 'missing images/Banana Farm + Mayan World Waterfall_.jpg',
+      image: 'missing images/Banana Farm tour_.jpg',
       duration: 'Full Day',
       groupSize: 'Minimum 3 people',
       included: ['Lunch', 'Tour Guide', 'Fees', 'One bottle of water each'],
