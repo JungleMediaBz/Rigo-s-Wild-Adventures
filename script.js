@@ -337,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function() {
       title: 'Half Day Cheil Chocolate',
       price: '$70 US',
       description: "Indulge your sweet tooth with an authentic 'bean-to-bar' chocolate experience. At a local organic farm, you'll learn the entire process, from harvesting cacao pods to grinding the beans and creating your own delicious Mayan chocolate. This is a fun, interactive, and tasty way to learn about a key part of Belizean culture.",
-      image: 'missing images/Half Day Cheil_.jpg',
+      image: 'missing images/Half Day Cheil.jpg',
       duration: '8AM to 1PM',
       groupSize: 'Minimum 3 people',
       included: ['Tour Guide', 'Fees', 'Transportation', 'One bottle of water each'],
